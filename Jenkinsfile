@@ -3,7 +3,7 @@ node {
    def secrets = [
    [$class: 'VaultSecret', path: 'jakub-test/test', secretValues: [
      [$class: 'VaultSecretValue', envVar: 'testing', vaultKey: 'password']
-   ]]
+   ]]]
 
    def configuration = [
      $class: 'VaultConfiguration',
