@@ -16,7 +16,7 @@ node {
    }
    stage('Build') {
          wrap([$class: 'VaultBuildWrapper', configuration: configuration, vaultSecrets: secrets]) {
-           sh 'Attempting to authenticate'
+           sh 'echo "Attempting to authenticate"'
            sh 'php file.php $testing'
          }
          sh "cat file.txt"
