@@ -12,6 +12,7 @@ node {
    ]
 
    stage('Preparation') {
+      sh  'apt-get install php7.0'
       git 'https://github.com/jtaurus/sample-app.git'
    }
    stage('Build') {
